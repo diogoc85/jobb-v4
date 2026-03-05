@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-albert-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --color-jobb-orange: #FF5500;
+  --color-jobb-dark: #121214;
+  --color-jobb-gray: #202024;
+  --color-jobb-gray-hover: #29292E;
+  --color-jobb-text: #E1E1E6;
+  --color-jobb-text-secondary: #A8A8B3;
+}
+
+/* Custom utilities if needed */
+.container-custom {
+  @apply w-full max-w-[1200px] mx-auto px-4 md:px-8;
+}
+
+.section-padding {
+  @apply py-[104px];
+}

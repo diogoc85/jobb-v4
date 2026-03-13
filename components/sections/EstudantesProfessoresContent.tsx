@@ -105,7 +105,7 @@ export function EstudantesProfessoresContent() {
                                             <p className="text-[#a3a3a3] mb-6 leading-relaxed">
                                                 Se você é estudante, solicite sua versão de estudante e comece a aprimorar suas habilidades de gerenciamento agora mesmo.
                                             </p>
-                                            <Link href="/contato" className="inline-flex justify-center w-full gradient hover:bg-orange-600 transition-colors text-white px-6 py-2.5 rounded-2xl">
+                                            <Link href="https://www.sistemajobb.com.br/teste-gratis" target="_blank" className="inline-flex justify-center w-full gradient hover:bg-orange-600 transition-colors text-white px-6 py-2.5 rounded-2xl">
                                                 Quero testar
                                             </Link>
                                         </div>
@@ -164,7 +164,7 @@ export function EstudantesProfessoresContent() {
                                             <p className="text-[#a3a3a3] mb-6 leading-relaxed">
                                                 Entre em contato conosco para conhecer mais sobre as condições especiais para professores e instituições de ensino.
                                             </p>
-                                            <Link href="/contato" className="inline-flex justify-center w-full gradient hover:bg-orange-600 transition-colors text-white px-6 py-2.5 rounded-2xl">
+                                            <Link href="https://api.whatsapp.com/send?phone=5581998504107&text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Sistema%20Jobb!" target="_blank" className="inline-flex justify-center w-full gradient hover:bg-orange-600 transition-colors text-white px-6 py-2.5 rounded-2xl">
                                                 Fale com um consultor
                                             </Link>
                                         </div>

@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: ['/admin', '/private/'],
+            disallow: ['/api/', '/admin/', '/private/'],
         },
-        sitemap: 'https://jobb.com.br/sitemap.xml',
+        sitemap: 'https://www.sistemajobb.com.br/sitemap.xml',
     };
 }

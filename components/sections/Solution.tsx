@@ -94,8 +94,8 @@ export function Solution() {
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                     className="flex flex-col md:flex-row justify-center gap-6"
                 >
-                    <Link className="btn px-8 py-4 bg-card hover:bg-jobb-bg-secondary text-center" href="#">Mais funcionalidades</Link>
-                    <Link className="btn px-8 py-4 gradient hover:bg-jobb-orange text-center" href="#">Teste grátis por 15 dias</Link>
+                    <Link className="btn px-8 py-4 bg-card hover:bg-jobb-bg-secondary text-center" href="/funcionalidades">Mais funcionalidades</Link>
+                    <Link className="btn px-8 py-4 gradient hover:bg-jobb-orange text-center" href="https://www.sistemajobb.com.br/teste-gratis" target="_blank">Teste grátis por 15 dias</Link>
                 </motion.div>
             </div>
         </section>

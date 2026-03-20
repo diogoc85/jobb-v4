@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-albert-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-jobb-orange: #F93F06;
+  --color-jobb-orange-hover: #ED6D05;
+  --color-jobb-dark: #232323;
+  --color-jobb-gray: #202024;
+  --color-jobb-gray-hover: #29292E;
+  --color-jobb-text: #E1E1E6;
+  --color-jobb-text-secondary: #A8A8B3;
+  --color-card: #2c2c2c;
+  --color-jobb-bg-secondary: #171717;
+}
+
+/* Custom utilities if needed */
+.container-custom {
+  @apply w-full max-w-[1440px] mx-auto px-6 md:px-8;
+}
+
+h3 {
+  font-size: larger;
+}
+
+.section-padding {
+  @apply py-[104px];
+}
+
+.card {
+  @apply bg-card;
+  border-radius: 1.4rem;
+}
+
+.btn {
+  border-radius: 1.4rem;
+}
+
+.gradient {
+  background-image: linear-gradient(to right, #F93F06, #ED6D05, #FF6A00, #F93F06);
+  background-size: 200% auto;
+  transition: background-position 0.4s ease-in-out;
+}
+
+.gradient:hover {
+  background-position: right center;
+}
+
+.bg-secondary {
+  @apply bg-[#171717];
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  animation: marquee 40s linear infinite;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

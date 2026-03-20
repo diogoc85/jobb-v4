@@ -1,0 +1,36 @@
+﻿src/components/sections/Ancine.tsx(53,140): error TS1005: '>' expected.
+src/components/sections/Ancine.tsx(53,141): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/ClientesTabs.tsx(88,47): error TS1005: '>' expected.
+src/components/sections/ClientesTabs.tsx(88,48): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Features.tsx(62,131): error TS1005: '>' expected.
+src/components/sections/Features.tsx(62,132): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Footer.tsx(18,100): error TS1005: '>' expected.
+src/components/sections/Footer.tsx(18,101): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Footer.tsx(53,95): error TS1005: '>' expected.
+src/components/sections/Footer.tsx(53,96): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Header.tsx(27,96): error TS1005: '>' expected.
+src/components/sections/Header.tsx(27,97): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Hero.tsx(60,151): error TS1005: '>' expected.
+src/components/sections/Hero.tsx(60,152): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Hero.tsx(68,140): error TS1005: '>' expected.
+src/components/sections/Hero.tsx(68,141): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Hero.tsx(82,142): error TS1005: '>' expected.
+src/components/sections/Hero.tsx(82,143): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Pricing.tsx(38,31): error TS1005: '>' expected.
+src/components/sections/Pricing.tsx(38,32): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Problem.tsx(24,27): error TS1005: '>' expected.
+src/components/sections/Problem.tsx(24,28): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/TabsSection.tsx(279,23): error TS1005: '>' expected.
+src/components/sections/TabsSection.tsx(279,24): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/TabsSection.tsx(350,64): error TS1005: '>' expected.
+src/components/sections/TabsSection.tsx(350,65): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/TargetAudience.tsx(32,166): error TS1005: '>' expected.
+src/components/sections/TargetAudience.tsx(32,167): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Testimonials.tsx(150,35): error TS1005: '>' expected.
+src/components/sections/Testimonials.tsx(150,36): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/components/sections/Testimonials.tsx(235,43): error TS1005: '>' expected.
+src/components/sections/Testimonials.tsx(235,44): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Funcionalidades.tsx(62,116): error TS1005: '>' expected.
+src/pages/Funcionalidades.tsx(62,117): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/Funcionalidades.tsx(67,121): error TS1005: '>' expected.
+src/pages/Funcionalidades.tsx(67,122): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?

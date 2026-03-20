@@ -10,6 +10,7 @@ import {
     Pen
 } from '@phosphor-icons/react/dist/ssr';
 import { TabsSection } from '@/components/sections/TabsSection';
+import { FluxoSection } from '@/components/sections/FluxoSection';
 
 export default function FuncionalidadesPage() {
     return (
@@ -27,6 +28,9 @@ export default function FuncionalidadesPage() {
                 {/* Accordion / Tabs Section */}
                 <TabsSection />
 
+                {/* Fluxo Section */}
+                <FluxoSection />
+
                 {/* Assinatura Digital Section */}
                 <section className="bg-primary section-padding">
                     <div className="container-custom max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,8 +46,8 @@ export default function FuncionalidadesPage() {
                                     <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-jobb-orange mb-6 text-sm">
                                         <Pen size={18} className="text-white" /> Assinatura digital
                                     </p>
-                                    <h2 className="text-4xl text-white mb-6 leading-tight">
-                                        Escolha entre a<br /><span className="font-bold">D4Sign e a DocuSign.</span>
+                                    <h2 className="text-4xl text-secondary mb-6 leading-tight">
+                                        Escolha entre a<br /><span className="text-white font-bold">D4Sign e a DocuSign.</span>
                                     </h2>
                                     <p className="text-[#a3a3a3] leading-relaxed text-lg">
                                         Além de você gerar os contratos em PDF de uma maneira prática e automatizada, agora você já pode enviar os contratos para seus clientes e fornecedores assinarem online.
@@ -58,11 +62,11 @@ export default function FuncionalidadesPage() {
                                 className=""
                             >
                                 <div className="flex gap-6 justify-end">
-                                    <div className="bg-white rounded-2xl w-full max-w-[240px] aspect-square flex flex-col items-center justify-center p-6 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                                    <div className="bg-white rounded-3xl w-full max-w-[240px] aspect-square flex flex-col items-center justify-center p-6 shadow-xl hover:-translate-y-2 transition-transform duration-300">
                                         <img src="/images/docusign.webp" alt="DocuSign" width={170} height={170} />
                                     </div>
 
-                                    <div className="bg-black border border-white/10 rounded-2xl w-full max-w-[240px] aspect-square flex flex-col items-center justify-center p-6 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                                    <div className="bg-black border border-white/10 rounded-3xl w-full max-w-[240px] aspect-square flex flex-col items-center justify-center p-6 shadow-xl hover:-translate-y-2 transition-transform duration-300">
                                         <div className="flex items-center text-white">
                                             <img src="/images/logo-d4sign.webp" alt="D4Sign" width={170} height={170} />
                                         </div>

@@ -32,33 +32,33 @@ import { motion, AnimatePresence } from 'motion/react';
 // ─── Carousel images per tab ───
 const tabImages: Record<string, string[]> = {
     cadastro: [
-        '/images/funcionalidades/cadastro/cadastro-permissoes.jpg',
-        '/images/funcionalidades/cadastro/cadastro-produtos.jpg',
-        '/images/funcionalidades/cadastro/cadastro-unidades.jpg',
+        '/images/funcionalidades/cadastro/cadastro-permissoes.webp',
+        '/images/funcionalidades/cadastro/cadastro-produtos.webp',
+        '/images/funcionalidades/cadastro/cadastro-unidades.webp',
     ],
     financeiro: [
-        '/images/funcionalidades/financeiro/contas-pagar.jpg',
-        '/images/funcionalidades/financeiro/faturas.jpg',
-        '/images/funcionalidades/financeiro/plano-contas.jpg',
-        '/images/funcionalidades/financeiro/relacao-pagamentos.jpg',
+        '/images/funcionalidades/financeiro/contas-pagar.webp',
+        '/images/funcionalidades/financeiro/faturas.webp',
+        '/images/funcionalidades/financeiro/plano-contas.webp',
+        '/images/funcionalidades/financeiro/relacao-pagamentos.webp',
     ],
     tarefas: [
-        '/images/funcionalidades/tarefas/cadastro-projeto.jpg',
-        '/images/funcionalidades/tarefas/gantt.jpg',
-        '/images/funcionalidades/tarefas/gestao-tarefas.jpg',
+        '/images/funcionalidades/tarefas/cadastro-projeto.webp',
+        '/images/funcionalidades/tarefas/gantt.webp',
+        '/images/funcionalidades/tarefas/gestao-tarefas.webp',
     ],
     orcamentos: [
-        '/images/funcionalidades/orcamentos/audiovisual.jpg',
-        '/images/funcionalidades/orcamentos/publicitario.jpg',
+        '/images/funcionalidades/orcamentos/audiovisual.webp',
+        '/images/funcionalidades/orcamentos/publicitario.webp',
     ],
     'ordem-do-dia': [
-        '/images/funcionalidades/tela2.jpg.jpeg',
-        '/images/funcionalidades/tela3.jpg.jpeg',
-        '/images/funcionalidades/tela5.jpg.jpeg',
+        '/images/funcionalidades/tela2.jpg.webp',
+        '/images/funcionalidades/tela3.jpg.webp',
+        '/images/funcionalidades/tela5.jpg.webp',
     ],
     equipamentos: [
-        '/images/funcionalidades/equipamentos/consulta-equipamentos.jpg',
-        '/images/funcionalidades/equipamentos/saida-equipamentos.jpg',
+        '/images/funcionalidades/equipamentos/consulta-equipamentos.webp',
+        '/images/funcionalidades/equipamentos/saida-equipamentos.webp',
     ],
 };
 

@@ -7,7 +7,7 @@ export function Problem() {
         <section className="">
             <div className=" container-custom ">
 
-                <div className="bg-secondary rounded-2xl grid lg:grid-cols-2 gap-12 items-end">
+                <div className="bg-secondary rounded-2xl lg:gap-12 justify-between lg:px-16 px-4 flex lg:flex-row flex-col-reverse">
                     <MotionDiv
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}

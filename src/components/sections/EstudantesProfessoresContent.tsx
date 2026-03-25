@@ -100,12 +100,12 @@ export function EstudantesProfessoresContent() {
 
                                         <StudentIcon size={48} className="text-jobb-orange" weight="fill" />
 
-                                        <div className="flex flex-col">
+                                        <div className="flex flex-wrap">
                                             <h3 className="font-bold text-white text-lg mb-2">Aprenda na prática</h3>
                                             <p className="text-[#a3a3a3] mb-6 leading-relaxed">
                                                 Se você é estudante, solicite sua versão de estudante e comece a aprimorar suas habilidades de gerenciamento agora mesmo.
                                             </p>
-                                            <Link to="https://www.sistemajobb.com.br/teste-gratis" target="_blank" className="inline-flex justify-center w-full gradient hover:bg-orange-600 transition-colors text-white px-6 py-2.5 rounded-2xl">
+                                            <Link to="https://www.sistemajobb.com.br/teste-gratis" target="_blank" className="justify-center gradient hover:bg-orange-600 transition-colors text-white px-6 py-2.5 rounded-2xl">
                                                 Quero testar
                                             </Link>
                                         </div>
@@ -158,13 +158,13 @@ export function EstudantesProfessoresContent() {
                                     className="w-full lg:w-1/3 xl:w-1/3"
                                 >
                                     <div className="bg-card transition-colors duration-300 hover:bg-card/50 rounded-2xl p-8 flex flex-col gap-6 items-start">
-                                        <div className="flex flex-col">
+                                        <div className="flex flex-wrap">
                                             <ChalkboardTeacherIcon className="text-jobb-orange" size={48} />
                                             <h3 className="font-bold text-white text-lg mt-4 my-2">Seja um Parceiro</h3>
                                             <p className="text-[#a3a3a3] mb-6 leading-relaxed">
                                                 Entre em contato conosco para conhecer mais sobre as condições especiais para professores e instituições de ensino.
                                             </p>
-                                            <Link to="https://api.whatsapp.com/send?phone=5581998504107&text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Sistema%20Jobb!" target="_blank" className="inline-flex justify-center w-full gradient hover:bg-orange-600 transition-colors text-white px-6 py-2.5 rounded-2xl">
+                                            <Link to="https://api.whatsapp.com/send?phone=5581998504107&text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Sistema%20Jobb!" target="_blank" className="justify-center gradient hover:bg-orange-600 transition-colors text-white px-6 py-2.5 rounded-2xl">
                                                 Fale com um consultor
                                             </Link>
                                         </div>

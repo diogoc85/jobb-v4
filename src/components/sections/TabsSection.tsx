@@ -28,13 +28,18 @@ import {
     CheckSquareOffsetIcon,
 } from '@phosphor-icons/react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 // ─── Carousel images per tab ───
 const tabImages: Record<string, string[]> = {
-    cadastro: [
-        '/images/funcionalidades/cadastro/cadastro-permissoes.webp',
-        '/images/funcionalidades/cadastro/cadastro-produtos.webp',
-        '/images/funcionalidades/cadastro/cadastro-unidades.webp',
+    orcamentos: [
+        '/images/funcionalidades/orcamentos/audiovisual.webp',
+        '/images/funcionalidades/orcamentos/publicitario.webp',
+    ],
+    campanhas: [
+        '/images/funcionalidades/tela2.jpg.webp',
+        '/images/funcionalidades/tela3.jpg.webp',
+        '/images/funcionalidades/tela5.jpg.webp',
     ],
     financeiro: [
         '/images/funcionalidades/financeiro/contas-pagar.webp',
@@ -47,18 +52,15 @@ const tabImages: Record<string, string[]> = {
         '/images/funcionalidades/tarefas/gantt.webp',
         '/images/funcionalidades/tarefas/gestao-tarefas.webp',
     ],
-    orcamentos: [
-        '/images/funcionalidades/orcamentos/audiovisual.webp',
-        '/images/funcionalidades/orcamentos/publicitario.webp',
+    relatorios: [
+        '/images/funcionalidades/relatorios/orcamento-periodo.webp',
+        '/images/funcionalidades/relatorios/visao-orcamento.webp',
+        '/images/funcionalidades/relatorios/conta-pagar.webp',
     ],
-    'ordem-do-dia': [
-        '/images/funcionalidades/tela2.jpg.webp',
-        '/images/funcionalidades/tela3.jpg.webp',
-        '/images/funcionalidades/tela5.jpg.webp',
-    ],
-    equipamentos: [
-        '/images/funcionalidades/equipamentos/consulta-equipamentos.webp',
-        '/images/funcionalidades/equipamentos/saida-equipamentos.webp',
+    seguranca: [
+        '/images/funcionalidades/cadastro/cadastro-permissoes.webp',
+        '/images/funcionalidades/cadastro/cadastro-produtos.webp',
+        '/images/funcionalidades/cadastro/cadastro-unidades.webp',
     ],
 };
 
@@ -71,176 +73,166 @@ interface BentoItem {
     size?: 'large' | 'normal';
 }
 
-const tabsData: { id: string; title: string; items: BentoItem[] }[] = [
+const tabsData: { id: string; title: string; tags: string[]; items: BentoItem[] }[] = [
     {
-        id: 'cadastro',
-        title: 'Cadastro',
+        id: 'orcamentos',
+        title: 'Orçamentos',
+        tags: ['Publicitários', 'Audiovisual'],
         items: [
             {
-                icon: <BuildingsIcon size={36} weight="light" />,
-                title: 'Unidades sem limites',
-                description: 'Cadastre quantas unidades desejar! Adicione e gerencie todas as unidades da sua empresa de forma prática e ilimitada.',
-                size: 'large',
+                icon: <CalculatorIcon size={36} weight="light" />,
+                title: 'Orçamentos do início ao fechamento',
+                description: 'Crie, revise e acompanhe propostas com status claro até a aprovação.',
             },
             {
-                icon: <IdentificationCardIcon size={36} weight="light" />,
-                title: 'Permissões e perfis',
-                description: 'Controle total sobre permissões de cada usuário. Direcione com segurança as ações de cada membro da equipe no sistema.',
+                icon: <EnvelopeSimpleIcon size={36} weight="light" />,
+                title: 'Proposta enviada, decisão acelerada',
+                description: 'Organize envio de orçamento e contrato em um fluxo mais rápido e profissional.',
             },
             {
-                icon: <UserPlusIcon size={36} weight="light" />,
-                title: 'Usuários por unidade',
-                description: 'Segmente usuários por unidade com perfis personalizados, garantindo acesso direcionado às informações relevantes.',
+                icon: <ChartLineUpIcon size={36} weight="light" />,
+                title: 'Menos retrabalho na rotina comercial',
+                description: 'Centralize versões, valores e detalhes do orçamento com mais agilidade.',
             },
             {
-                icon: <CoinsIcon size={36} weight="light" />,
-                title: 'Produtos do orçamento',
-                description: 'Base de itens do orçamento com pré-cadastro de valor e associação ao plano de contas no financeiro.',
+                icon: <LinkIcon size={36} weight="light" />,
+                title: 'Da negociação à execução com rastreio',
+                description: 'Conecte orçamento, ordem do dia e relação de pagamento com visão completa.',
+            },
+        ],
+    },
+    {
+        id: 'campanhas',
+        title: 'Campanhas',
+        tags: [],
+        items: [
+            {
+                icon: <MegaphoneIcon size={36} weight="light" />,
+                title: 'Campanhas centralizadas em um só lugar',
+                description: 'Reúna briefing, metas e investimento previsto para coordenar cada entrega com clareza.',
+            },
+            {
+                icon: <ChartBarIcon size={36} weight="light" />,
+                title: 'Estratégia e operação na mesma tela',
+                description: 'Acompanhe detalhes da campanha com visão consolidada dos orçamentos vinculados.',
+            },
+            {
+                icon: <HandshakeIcon size={36} weight="light" />,
+                title: 'Menos ruído entre atendimento e produção',
+                description: 'Organize informações-chave da campanha para alinhar times e prazos.',
+            },
+            {
+                icon: <ListChecksIcon size={36} weight="light" />,
+                title: 'Decisões de campanha com base real',
+                description: 'Visualize evolução e investimento para priorizar ações com mais segurança.',
             },
         ],
     },
     {
         id: 'financeiro',
         title: 'Financeiro',
+        tags: ['Extrato de Lançamentos', 'Contas a pagar', 'Contas a receber', 'Relação de pagamentos', 'Faturamento', 'Fluxo de caixa', 'Verba de produção', 'Plano de contas', 'Contas bancárias', 'Centro de custos'],
         items: [
             {
                 icon: <CurrencyDollarIcon size={36} weight="light" />,
-                title: 'Contas a Pagar',
-                description: 'Gestão financeira completa, integrando contas a pagar diretamente do orçamento e custos fixos administrativos.',
-                size: 'large',
-            },
-            {
-                icon: <WalletIcon size={36} weight="light" />,
-                title: 'Contas a Receber',
-                description: 'Controle financeiro completo com gerenciamento de contas a receber e valores da sua produtora audiovisual.',
-            },
-            {
-                icon: <ChartLineUpIcon size={36} weight="light" />,
-                title: 'Fluxo de Caixa',
-                description: 'Acompanhe entradas e saídas com gráfico de saldo intuitivo para análise precisa das finanças.',
+                title: 'Financeiro integrado à operação',
+                description: 'Controle lançamentos, contas a pagar e contas a receber com fluxo padronizado.',
             },
             {
                 icon: <BankIcon size={36} weight="light" />,
-                title: 'Conciliação Bancária',
-                description: 'Importe arquivos OFX e conte com conciliação inteligente com sugestões precisas de lançamentos.',
+                title: 'Conciliação bancária com mais confiança',
+                description: 'Compare movimentos e ajuste divergências sem perder tempo em planilhas paralelas.',
+            },
+            {
+                icon: <WalletIcon size={36} weight="light" />,
+                title: 'Caixa previsível, gestão mais segura',
+                description: 'Monitore fluxo de caixa e antecipe decisões com dados atualizados.',
             },
             {
                 icon: <ReceiptIcon size={36} weight="light" />,
-                title: 'Nota Fiscal Eletrônica',
-                description: 'Faturamento e emissão de NF-e diretamente pela plataforma de forma ágil e segura.',
+                title: 'Faturamento e cobrança sem gargalos',
+                description: 'Acelere faturamento, acompanhe títulos e reduza atrasos no ciclo financeiro.',
             },
         ],
     },
     {
         id: 'tarefas',
         title: 'Tarefas',
+        tags: ['Gestão do tempo', 'Gráfico de Gantt', 'Kanban'],
         items: [
             {
                 icon: <ListChecksIcon size={36} weight="light" />,
-                title: 'Quadro Kanban',
-                description: 'Gerencie tarefas com quadro Kanban, adicione convidados, faça comentários e anexe arquivos diretamente.',
-                size: 'large',
-            },
-            {
-                icon: <ChartBarIcon size={36} weight="light" />,
-                title: 'Gráfico de Gantt',
-                description: 'Acompanhe o andamento de cada tarefa de forma intuitiva com visão de todos os projetos juntos.',
-            },
-            {
-                icon: <CalendarIcon size={36} weight="light" />,
-                title: 'Calendário com Cores',
-                description: 'Atribua cores para cada tarefa com identificação rápida e fácil no calendário de tarefas.',
+                title: 'Tarefas que andam com o time',
+                description: 'Organize atividades em kanban, lista, calendário e gantt conforme o ritmo do projeto.',
             },
             {
                 icon: <TimerIcon size={36} weight="light" />,
-                title: 'Gestão de Tempo',
-                description: 'Crie tarefas com registro de tempo gasto em cada atividade com funcionalidade de timesheet.',
+                title: 'Prazos sob controle, entregas em dia',
+                description: 'Defina dependências, acompanhe progresso e elimine bloqueios antes de virar atraso.',
             },
-        ],
-    },
-    {
-        id: 'orcamentos',
-        title: 'Orçamentos',
-        items: [
-            {
-                icon: <CalculatorIcon size={36} weight="light" />,
-                title: 'Criação Rápida',
-                description: 'Crie orçamentos como no Excel. Use modelos personalizados, calcule taxas, impostos, BV e comissões.',
-                size: 'large',
-            },
-            {
-                icon: <HandshakeIcon size={36} weight="light" />,
-                title: 'Prestação de Contas',
-                description: 'Após aprovação, preencha fornecedores e custos de produção diretamente na plataforma.',
-            },
-            {
-                icon: <LinkIcon size={36} weight="light" />,
-                title: 'Link para Fornecedor',
-                description: 'Envie link seguro para o fornecedor preencher dados cadastrais e anexar notas fiscais.',
-            },
-            {
-                icon: <FilePdfIcon size={36} weight="light" />,
-                title: 'Envio em PDF ou Link',
-                description: 'Envie orçamentos em PDF ou link com template personalizado com a marca da sua empresa.',
-            },
-            {
-                icon: <CoinsIcon size={36} weight="light" />,
-                title: 'Verba de Produção',
-                description: 'Gerencie verbas para pagamento de despesas em dinheiro com app para prestação de contas.',
-            },
-        ],
-    },
-    {
-        id: 'ordem-do-dia',
-        title: 'Ordem do dia',
-        items: [
             {
                 icon: <UserPlusIcon size={36} weight="light" />,
-                title: 'Importar do Orçamento',
-                description: 'Importe elenco e equipe técnica diretamente do orçamento, economizando tempo e evitando erros.',
-                size: 'large',
+                title: 'Colaboração prática no dia a dia',
+                description: 'Centralize comentários, anexos e atualizações para reduzir ruído na execução.',
             },
             {
-                icon: <EnvelopeSimpleIcon size={36} weight="light" />,
-                title: 'E-mails e Avisos',
-                description: 'Envie e-mails e compartilhe link de acesso para a equipe visualizar a Ordem do dia e Call sheet.',
-            },
-            {
-                icon: <CopyIcon size={36} weight="light" />,
-                title: 'Duplicar Ordem do Dia',
-                description: 'Duplique documentos com um clique, economizando tempo e garantindo consistência.',
-            },
-            {
-                icon: <MegaphoneIcon size={36} weight="light" />,
-                title: 'Equipe Atualizada',
-                description: 'Descrição das cenas, ambientes e locações com avisos e atualizações para toda a equipe.',
-            },
-            {
-                icon: <CloudSunIcon size={36} weight="light" />,
-                title: 'Previsão do Tempo',
-                description: 'Previsão do tempo integrada e cadastro de locações para planejar com confiança.',
-            },
-            {
-                icon: <PrinterIcon size={36} weight="light" />,
-                title: 'Impressão em PDF',
-                description: 'Imprima Ordens do dia e Call sheets em PDF, disponíveis para a equipe mesmo offline.',
+                icon: <CalendarIcon size={36} weight="light" />,
+                title: 'Backlog claro, sprint mais produtiva',
+                description: 'Priorize tarefas com visibilidade total do que está pendente, em andamento e concluído.',
             },
         ],
     },
     {
-        id: 'equipamentos',
-        title: 'Equipamentos',
+        id: 'relatorios',
+        title: 'Relatórios',
+        tags: ['Orcamento por Período', 'Visão do Orçamento', 'Lançamentos por Dia', 'Contas a Pagar', 'Contas a Receber', 'Demonstrativo DRE'],
         items: [
             {
-                icon: <BarcodeIcon size={36} weight="light" />,
-                title: 'Cadastro e Inventário',
-                description: 'Registre todos os equipamentos com código de barras próprio para gestão eficiente do inventário.',
-                size: 'large',
+                icon: <ChartBarIcon size={36} weight="light" />,
+                title: 'Relatórios que viram decisão',
+                description: 'Acompanhe indicadores por período e transforme dados em ação com rapidez.',
+            },
+            {
+                icon: <ChartLineUpIcon size={36} weight="light" />,
+                title: 'Visão financeira em profundidade',
+                description: 'Analise receitas, despesas, conciliação e DRE com recortes que fazem sentido para o negócio.',
+            },
+            {
+                icon: <CalculatorIcon size={36} weight="light" />,
+                title: 'Menos planilha, mais inteligência',
+                description: 'Consolide informações operacionais e financeiras em relatórios prontos para gestão.',
+            },
+            {
+                icon: <ListChecksIcon size={36} weight="light" />,
+                title: 'Gestão orientada por evidência',
+                description: 'Compare cenários, identifique gargalos e aumente previsibilidade dos resultados.',
+            },
+        ],
+    },
+    {
+        id: 'seguranca',
+        title: 'Segurança e Perfis',
+        tags: [],
+        items: [
+            {
+                icon: <IdentificationCardIcon size={36} weight="light" />,
+                title: 'Controle de acesso sem brechas',
+                description: 'Defina permissões por módulo e ação para cada perfil e mantenha sua operação protegida.',
+            },
+            {
+                icon: <UserPlusIcon size={36} weight="light" />,
+                title: 'Usuários certos, acessos certos',
+                description: 'Gerencie usuários, papéis e visibilidade com governança clara em um único painel.',
+            },
+            {
+                icon: <BuildingsIcon size={36} weight="light" />,
+                title: 'Segurança que acompanha o crescimento',
+                description: 'Estruture regras de acesso por equipe sem travar a produtividade do dia a dia.',
             },
             {
                 icon: <CheckSquareOffsetIcon size={36} weight="light" />,
-                title: 'Checklist de Entrada/Saída',
-                description: 'Controle saída e entrada de equipamentos com lista personalizada de check-list e registro completo.',
+                title: 'Menos risco, mais controle operacional',
+                description: 'Padronize permissões e reduza erros de acesso em processos críticos.',
             },
         ],
     },
@@ -338,13 +330,45 @@ export function TabsSection() {
                     {/* ── Tab Content ── */}
                     <div className="w-full flex flex-col gap-12">
 
-                        {/* Carousel */}
-                        <div className="w-full max-w-5xl mx-auto mb-12">
+                        {/* Info Box & Carousel */}
+                        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12  w-full mb-12">
+                            {/* Text Info Box - 1/3 */}
+                            <motion.div
+                                key={`text-${activeTab}`}
+                                initial={{ opacity: 0, x: -30 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                className="w-full lg:w-1/3 bg-card rounded-2xl p-8 flex flex-col justify-between"
+                            >
+                                <div className='flex flex-wrap'>
+                                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                                        {activeData?.title}
+                                    </h2>
+                                    <p className="text-white/80 text-[17px] leading-relaxed mb-6">
+                                        Conheça os recursos e funcionalidades do módulo de <span className="text-jobb-orange font-medium">{activeData?.title}</span>, projetados para trazer mais agilidade e controle para seu negócio.
+                                    </p>
+                                    <Link className="btn px-8 py-4 mt-2 gradient hover:bg-jobb-orange text-center" to="https://www.sistemajobb.com.br/teste-gratis" target="_blank">Teste grátis por 15 dias</Link>
+                                </div>
+
+                                <div className="flex flex-wrap gap-2">
+                                    {activeData?.tags?.map((tag, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="px-3 py-1 text-[12px] border border-white/20 rounded-full text-white/50 bg-white/5 whitespace-nowrap"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                            {/* Carousel - 2/3 */}
                             <motion.div
                                 key={`carousel-${activeTab}`}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+                                className="w-full lg:w-2/3"
                             >
                                 <ImageCarousel images={images} />
                             </motion.div>
@@ -360,23 +384,26 @@ export function TabsSection() {
                         >
                             {activeData?.items.map((item, i) => {
                                 // Se a tab tiver 4 cards (ex: Cadastro, Tarefas), ou for especificada com layout 50%
-                                const isTwoCols = activeData.items.length === 4;
-                                const widthClass = isTwoCols
-                                    ? 'md:w-[calc(37%-12px)]'
-                                    : 'md:w-[calc(33.333%-16px)]';
+                                // Ajusta larguras conforme a quantidade de itens na aba
+                                const isFourItems = activeData.items.length === 4;
+                                const widthClass = isFourItems
+                                    ? 'md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]' // 4 colunas no lg
+                                    : item.size === 'large'
+                                        ? 'md:w-[calc(100%-24px)] lg:w-[calc(66.666%-16px)]'
+                                        : 'md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]'; // 3 colunas no lg
 
                                 return (
                                     <div
                                         key={i}
-                                        className={`w-full ${widthClass} bg-card rounded-2xl p-8 group transition-colors duration-300 hover:bg-card/60`}
+                                        className={`w-full ${widthClass} bg-card rounded-2xl ${isFourItems ? 'p-6 lg:p-8' : 'p-8'} group transition-colors duration-300 hover:bg-card/60`}
                                     >
-                                        <div className="flex items-start gap-6">
+                                        <div className={`flex ${isFourItems ? 'flex-col items-start gap-4 lg:gap-6' : 'items-start gap-6'}`}>
                                             <div className="text-jobb-orange shrink-0 mt-1 group-hover:scale-110 transition-transform">
                                                 {item.icon}
                                             </div>
                                             <div>
-                                                <h3 className="text-white text-lg font-medium mb-2">{item.title}</h3>
-                                                <p className="text-[#a3a3a3] leading-relaxed text-[15px]">{item.description}</p>
+                                                <h3 className={`text-white font-medium mb-2 ${isFourItems ? 'text-base lg:text-lg' : 'text-lg'}`}>{item.title}</h3>
+                                                <p className={`text-[#a3a3a3] leading-relaxed ${isFourItems ? 'text-[14px] lg:text-[15px]' : 'text-[15px]'}`}>{item.description}</p>
                                             </div>
                                         </div>
                                     </div>

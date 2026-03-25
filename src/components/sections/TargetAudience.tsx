@@ -4,17 +4,17 @@ import { MotionDiv, MotionP, MotionHeader, MotionSpan, MotionSection } from '@/c
 
 export function TargetAudience() {
     return (
-        <section className="section-padding bg-[url('/images/bg-indicado.webp')] md:bg-contain bg-bottom bg-center bg-no-repeat bg-fixed relative flex flex-col justify-center">
+        <section id="target-audience" className="section-padding bg-[url('/images/bg-indicado.webp')] md:bg-contain bg-bottom bg-center bg-no-repeat bg-fixed relative flex flex-col justify-center">
             <div className="absolute inset-0 bg-jobb-dark/80"></div>
             <div className="container-custom relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
                     {/* Logos Grid */}
                     <MotionDiv
                         initial={{ opacity: 0, scale: 0.50, y: 10 }}
                         whileInView={{ opacity: 1, scale: 1, y: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-                        className="grid grid-cols-3 gap-4 md:gap-6 w-fit mx-auto lg:mx-0"
+                        className="grid grid-cols-3 gap-4 md:gap-6 w-fit mx-auto lg:ml-auto lg:mr-0"
                     >
                         {[
                             { src: "/images/canais/globoplay.webp", alt: "Globo play" },

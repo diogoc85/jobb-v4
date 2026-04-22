@@ -34,6 +34,14 @@ const clientLogos = [
 ];
 
 const testimonialsData = [
+
+
+    {
+        quote: "O sistema está alinhado com as prioridades de planejamento e organização da produtora e permite manter a produção organizada, contemplando todos os detalhes do início ao fim. Seu principal diferencial é a capacidade de customização, a equipe consegue atender prontamente e adaptar funcionalidades específicas ao nosso dia a dia. Essa flexibilidade faz toda a diferença.",
+        name: "Andre Alves",
+        empresa: "Fish Produtora",
+        image: "/images/depoimentos/andre-alves.webp"
+    },
     {
         quote: "O Jobb é vital para a Sanfona. Temos total controle de orçamentos, custos, lucratividade, pagamentos e os relatórios mais específicos de forma rápida e muito intuitiva. Recomendo até pros meus concorrentes.",
         name: "Alfredo Valtier",

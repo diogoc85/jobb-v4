@@ -35,7 +35,12 @@ const clientLogos = [
 
 const testimonialsData = [
 
-
+    {
+        quote: "A implementação do Sistema Jobb trouxe mais eficiência e organização. A integração entre os processos de produção executiva e financeiro trouxe mais eficiência e reduziu enormemente retrabalhos, enquanto a centralização de documentos em um repositório único garante mais controle e segurança. Além disso, o sistema facilita muito a prestação de contas Ancine, com pré-preenchimento de relatórios como Relação de Pagamentos, Demonstrativo de Extrato e Orçamentário, economizando tempo e evitando inconsistências. Hoje é essencial na nossa operação.",
+        name: "Vinícius",
+        empresa: "Felistoque Cinema",
+        image: "/images/depoimentos/vinicius.webp"
+    },
     {
         quote: "O sistema está alinhado com as prioridades de planejamento e organização da produtora e permite manter a produção organizada, contemplando todos os detalhes do início ao fim. Seu principal diferencial é a capacidade de customização, a equipe consegue atender prontamente e adaptar funcionalidades específicas ao nosso dia a dia. Essa flexibilidade faz toda a diferença.",
         name: "Andre Alves",

@@ -101,7 +101,7 @@ export function EstudantesProfessoresContent() {
                                         <StudentIcon size={48} className="text-jobb-orange" weight="fill" />
 
                                         <div className="flex flex-wrap">
-                                            <h3 className="font-bold text-white text-lg mb-2">Aprenda na prática</h3>
+                                            <h3 className="font-bold text-white text-lg mt-4 my-2">Aprenda na prática</h3>
                                             <p className="text-[#a3a3a3] mb-6 leading-relaxed">
                                                 Se você é estudante, solicite sua versão de estudante e comece a aprimorar suas habilidades de gerenciamento agora mesmo.
                                             </p>
@@ -158,8 +158,9 @@ export function EstudantesProfessoresContent() {
                                     className="w-full lg:w-1/3 xl:w-1/3"
                                 >
                                     <div className="bg-card transition-colors duration-300 hover:bg-card/50 rounded-2xl p-8 flex flex-col gap-6 items-start">
+
+                                        <ChalkboardTeacherIcon className="text-jobb-orange" size={48} />
                                         <div className="flex flex-wrap">
-                                            <ChalkboardTeacherIcon className="text-jobb-orange" size={48} />
                                             <h3 className="font-bold text-white text-lg mt-4 my-2">Seja um Parceiro</h3>
                                             <p className="text-[#a3a3a3] mb-6 leading-relaxed">
                                                 Entre em contato conosco para conhecer mais sobre as condições especiais para professores e instituições de ensino.

@@ -36,11 +36,11 @@ const tabImages: Record<string, string[]> = {
         '/images/funcionalidades/orcamentos/audiovisual.webp',
         '/images/funcionalidades/orcamentos/publicitario.webp',
     ],
-    campanhas: [
+    /* campanhas: [
         '/images/funcionalidades/tela2.jpg.webp',
         '/images/funcionalidades/tela3.jpg.webp',
         '/images/funcionalidades/tela5.jpg.webp',
-    ],
+    ], */
     financeiro: [
         '/images/funcionalidades/financeiro/contas-pagar.webp',
         '/images/funcionalidades/financeiro/faturas.webp',
@@ -48,9 +48,10 @@ const tabImages: Record<string, string[]> = {
         '/images/funcionalidades/financeiro/relacao-pagamentos.webp',
     ],
     tarefas: [
-        '/images/funcionalidades/tarefas/cadastro-projeto.webp',
-        '/images/funcionalidades/tarefas/gantt.webp',
         '/images/funcionalidades/tarefas/gestao-tarefas.webp',
+        '/images/funcionalidades/tarefas/gantt.webp',
+        '/images/funcionalidades/tarefas/cadastro-projeto.webp',
+
     ],
     relatorios: [
         '/images/funcionalidades/relatorios/orcamento-periodo.webp',
@@ -101,7 +102,7 @@ const tabsData: { id: string; title: string; tags: string[]; items: BentoItem[] 
             },
         ],
     },
-    {
+    /* {
         id: 'campanhas',
         title: 'Campanhas',
         tags: [],
@@ -127,7 +128,7 @@ const tabsData: { id: string; title: string; tags: string[]; items: BentoItem[] 
                 description: 'Visualize evolução e investimento para priorizar ações com mais segurança.',
             },
         ],
-    },
+    }, */
     {
         id: 'financeiro',
         title: 'Financeiro',

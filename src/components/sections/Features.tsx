@@ -23,9 +23,9 @@ export function Features() {
 
                 <div className="grid lg:grid-cols-3 gap-8 mb-4">
                     {[
-                        { icon: OpenAiLogoIcon, title: "Jobb AI", desc: "Chat inteligente para consulta rápida a seus dados: tome decisões estratégicas com consultas instantâneas via chat." },
                         { icon: WebhooksLogoIcon, title: "Conectividade e API", desc: "A nova arquitetura permitirá integrações poderosas. Em breve, disponibilizaremos nossa API aberta e documentada." },
                         { icon: Eye, title: "Visibilidade do status", desc: "Acompanhe em tempo real a fase do status de produção e tenha mais visibilidade do fluxo do projeto." },
+                        { icon: DeviceMobileCameraIcon, title: "Orçamento no celular", desc: "A nova versão traz uma interface pensada para a mobilidade real. Editar orçamentos pelo celular vai ficar muito mais fácil e intuitivo." },
                     ].map((feature, i) => (
                         <MotionDiv
                             key={i}
@@ -40,7 +40,7 @@ export function Features() {
                             </div>
                             <h3 className="text-white mb-3">
                                 {feature.title.split(' ').map((word, idx) =>
-                                    word === 'AI' || word === 'API' || word === 'status' ?
+                                    word === 'AI' || word === 'API' || word === 'status' || word === 'celular' ?
                                         <span key={idx} className="text-jobb-orange"> {word}</span> :
                                         <span key={idx}> {word}</span>
                                 )}
@@ -49,35 +49,7 @@ export function Features() {
                         </MotionDiv>
                     ))}
                 </div>
-
-                <div className="flex flex-col lg:flex-row items-center gap-8">
-                    <MotionDiv
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-                        className="lg:w-1/3 relative flex justify-center"
-                    >
-                        <div className="relative w-64 h-[18rem] flex items-center justify-center overflow-visible">
-                            <img src="/images/celular.webp" alt="Orçamento no celular" sizes="256px" className="object-contain" />
-                        </div>
-                    </MotionDiv>
-                    <MotionDiv
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-                        className="lg:w-2/3"
-                    >
-                        <div>
-                            <DeviceMobileCameraIcon size={32} className="mb-4 text-jobb-orange" />
-                            <h3 className="mb-3 text-white">Orçamento no <span className="text-jobb-orange">celular</span></h3>
-                        </div>
-                        <p className="text-jobb-text-secondary leading-relaxed text-[16px]">
-                            A nova versão traz uma interface pensada para a mobilidade real. Editar orçamentos pelo celular vai ficar muito mais fácil e intuitivo. Ajuste valores, itens e prazos na palma da sua mão com a mesma precisão do computador, de onde você estiver.
-                        </p>
-                    </MotionDiv>
-                </div>
+                {/* Ajuste valores, itens e prazos na palma da sua mão com a mesma precisão do computador, de onde você estiver. */}
             </div>
         </section>
     );
